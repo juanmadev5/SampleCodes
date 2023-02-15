@@ -1,8 +1,5 @@
-
-
 import java.time.LocalDateTime
 import java.util.*
-
 
     /*in an xml app you need to initialize main() in onCreate*/
 
@@ -38,73 +35,31 @@ import java.util.*
             "Fri",
             "Sat"
         )
-        when(calendar.get(Calendar.DAY_OF_WEEK)) {
-            1 -> {
-                return dayOfWeekList[0]
-            }
-            2 -> {
-                return dayOfWeekList[1]
-            }
-            3 -> {
-                return dayOfWeekList[2]
-            }
-            4 -> {
-                return dayOfWeekList[3]
-            }
-            5 -> {
-                return dayOfWeekList[4]
-            }
-            6 -> {
-                return dayOfWeekList[5]
-            }
-            7 -> {
-                return dayOfWeekList[6]
-            }
-            else -> {
-                return "error"
-            }
+        return when(calendar.get(Calendar.DAY_OF_WEEK)) {
+            1 -> dayOfWeekList[0]
+            2 -> dayOfWeekList[1]
+            3 -> dayOfWeekList[2]
+            4 -> dayOfWeekList[3]
+            5 -> dayOfWeekList[4]
+            6 -> dayOfWeekList[5]
+            7 -> dayOfWeekList[6]
+            else -> "error"
         }
     }
     private fun month(): String {
-        when(calendar.get(Calendar.MONTH)) {
-            1 -> {
-                return "January"
-            }
-            2 -> {
-                return "February"
-            }
-            3 -> {
-                return "March"
-            }
-            4 -> {
-                return "April"
-            }
-            5 -> {
-                return "May"
-            }
-            6 -> {
-                return "June"
-            }
-            7 -> {
-                return "July"
-            }
-            8 -> {
-                return "August"
-            }
-            9 -> {
-                return "September"
-            }
-            10 -> {
-                return "October"
-            }
-            11 -> {
-                return "November"
-            }
-            12 -> {
-                return "December"
-            }
-            else -> {
-                return "error"
-            }
+        return when(calendar.get(Calendar.MONTH)) {
+            1 -> "January"
+            2 -> "February"
+            3 -> "March"
+            4 -> "April"
+            5 -> "May"
+            6 -> "June"
+            7 -> "July"
+            8 -> "August"
+            9 -> "September"
+            10 -> "October"
+            11 -> "November"
+            12 -> "December"
+            else -> "error"
         }
     }
